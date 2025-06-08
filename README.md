@@ -34,16 +34,11 @@ For a quick setup, you'll need the following:
 
     - When updating POSTGRES_PASSWORD, be careful with the choice of password to avoid connection errors *(e.g., “password authentication failed for user ‘postgres’”)* when         using DBeaver, psql, or Railway.
 
-    - You have two options:
-
-        **Option 1:** Use only letters (A–Z, a–z) for your password
+        **Use only letters (A–Z, a–z) for your password**
         ```
         POTGRES_PASSWORD=mysecurepassword
          ```
-        **Option 2:** If your password must contain numbers or special characters, always wrap it in single quotes
-        ```
-        POSTGRES_PASSWORD='pa$$w0rd123!'
-        ```
+        
 4. Attach a volume to the service by right clicking on the service and set the mount path to: `/var/lib/postgresql/data`. After this step, you should have 10 Railway Provided Variables.
 
 5. Deploy to apply the changes.
